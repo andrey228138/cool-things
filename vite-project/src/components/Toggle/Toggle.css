@@ -1,0 +1,22 @@
+.toggle-wrapper{
+    position: relative;
+width: 60px;
+height:30px;
+background-color: rgb(42, 42, 42);
+border-radius: 60px;
+cursor: pointer;
+}
+.circle{
+    position: absolute;
+width: 28px;
+height: 26px;
+background-color: white;
+border-radius: 100%;
+left: 2px;
+top: 2px;
+transition: 0.3s;
+}
+.circle.active{
+left: 30px;
+transition: 0.3s;
+}

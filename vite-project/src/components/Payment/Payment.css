@@ -1,0 +1,146 @@
+.wrapper-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid gray;
+  padding: 20px;
+  background-color: rgb(19, 19, 19);
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+}
+.glv-text-payment {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.description-payment {
+  color: gray;
+  font-size: 14px;
+}
+.btn-payment {
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+img {
+  max-width: 20px;
+}
+.method-payment-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.method-payment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  padding: 1rem 0px;
+  width: 113px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.method-payment:hover {
+  background-color: gray;
+  transition: 0.1s;
+}
+.method-payment.active {
+  border: 1px solid white;
+}
+.input-payment {
+  background-color: rgb(19, 19, 19);
+  height: 36px;
+  max-width: 377px;
+  width: 100%;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.input-payment-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.select-wrapper-expries {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  max-width: 200px;
+  width: fit-content;
+}
+.top-expries {
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(39, 39, 39);
+  color: white;
+  padding: 10px 50px 10px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid gray;
+
+  background-color: rgb(19, 19, 19);
+}
+.bottom-expries {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  bottom: 40px;
+  gap: 10px;
+  position: absolute;
+
+  background-color: rgb(19, 19, 19);
+  transition: 0.3s;
+  border-radius: 6px;
+  height: 0px;
+  overflow: hidden;
+  padding: 0px;
+
+}
+.bottom-expries::-webkit-scrollbar{
+    width: 0px;
+}
+.bottom-expries li {
+  padding: 5px 30px 5px 5px;
+
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.bottom-expries li:hover{
+    background-color: gray;
+    text-wrap: nowrap;
+}
+
+.bottom-expries.active {
+  padding: 5px;
+  height: 330px;
+  overflow: auto;
+  transition: 0.3s;
+  border: 1px solid gray;
+}
+.input-cvc{
+  width: 94px;
+  padding: 5px 0px 5px 10px;
+
+  border: 1px solid gray;
+  background-color: rgb(19, 19, 19);
+  font-size: 14px;
+}
+
+.select-wrapper-payment{
+  display: flex;
+  justify-content: space-between;
+}
+.element-select{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

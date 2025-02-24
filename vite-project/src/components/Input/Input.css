@@ -1,0 +1,15 @@
+.input{
+    height: 30px;
+    color: white;
+    background-color: #282828;
+    border: none;
+    font-size: 17px;
+    padding-left: 20px;
+}
+.input-btn{
+    padding: 10px 30px;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
