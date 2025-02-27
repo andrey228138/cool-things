@@ -266,58 +266,71 @@ export default function CustomTabs() {
     </svg>
   );
 
-  const clickCustomTab = (object) => {
-    setBottomContentUse(object.bottomContent);
-
-  };
   const [bottomContentUse, setBottomContentUse] = useState();
+  const [lineWidth, setLineWidth] = useState(0); 
+  const [activeTabIndex, setActiveTabIndex] = useState(0); 
+  const [paddingLeft, setPaddingLeft] = useState();
+  const clickCustomTab = (object, event, index) => {
+    setBottomContentUse(object.bottomContent);
+    const tabWidth = event.currentTarget.clientWidth;
+    setLineWidth(tabWidth); 
+    setActiveTabIndex(index); 
+    setPaddingLeft(object.padding);
+  };
+
   const objects = [
     {
       icon: grid,
       content: "Dashboard",
       number: "",
       bottomContent: "1",
+      padding: "0",
     },
     {
       icon: sliders,
       content: "Admin",
       number: "25",
       bottomContent: "2",
+      padding: "146.59",
     },
     {
       icon: truck,
       content: "Providers",
       number: "",
       bottomContent: "3",
+      padding: "297.5",
     },
     {
       icon: send,
       content: "Payout",
       number: "12",
       bottomContent: "4",
+      padding: "440.28",
     },
     {
       icon: users,
       content: "Consumers",
       number: "",
       bottomContent: "5",
+      padding: "594.28",
     },
     {
       icon: settings,
       content: "Settings",
       number: "",
       bottomContent: "6",
+      padding: "743.22",
     },
   ];
+
   return (
     <div className="wrapper">
       <div className="custom-tabs">
         {objects.map((object, index) => (
           <div
-            className="custom-tab"
+            className={`custom-tab ${activeTabIndex === index ? "active" : ""}`} 
             key={index}
-            onClick={() => clickCustomTab(object)}
-          
+            onClick={(event) => clickCustomTab(object, event, index)}
           >
             {object.icon}
             <p className="name-custom-tab">{object.content}</p>
@@ -328,8 +341,15 @@ export default function CustomTabs() {
             )}
           </div>
         ))}
+        <div
+          className="line-custom-tabs"
+          style={{
+            width: `${lineWidth}px`,
+            left: `${paddingLeft}px`,
+          }} 
+        ></div>
       </div>
       <div className="content-custom-tab">{bottomContentUse}</div>
     </div>
-  );
+  )
 }
