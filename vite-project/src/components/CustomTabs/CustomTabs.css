@@ -1,0 +1,17 @@
+.custom-tabs{
+    display: flex;
+}
+.custom-tab{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 20px;
+    cursor: pointer;
+}
+.number-custom-tab{
+    padding: 0px 6px;
+    background-color:#E9ECF1 ;
+    border-radius: 100px;
+    font-weight: 600;
+  
+}

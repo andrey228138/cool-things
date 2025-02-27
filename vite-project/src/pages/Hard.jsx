@@ -3,6 +3,7 @@ import Timer from "../components/Timer/Timer";
 import Payment from '../components/Payment/Payment'
 import Select from '../components/select/Select'
 import HardCalculate from "../components/HardCalculate/HardCalculate";
+import CustomTabs from "../components/CustomTabs/CustomTabs";
 export default function Hard() {
      return(
             <main>
@@ -16,6 +17,8 @@ export default function Hard() {
             <Select></Select>
             <h2>Hard-calculate</h2>
             <HardCalculate></HardCalculate>
+            <h2>Custom-tabs</h2>
+            <CustomTabs></CustomTabs>
             </main>
         )
 
